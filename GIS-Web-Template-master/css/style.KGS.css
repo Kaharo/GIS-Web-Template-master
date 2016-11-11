@@ -1,0 +1,305 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	padding: 0;
+}
+
+#map-canvas {
+	/*height: 100%;*/
+	width: 100%;
+	/*top: 50px;*/
+	top: 70px;
+	bottom: 0px;
+	position: absolute;
+}
+#map-inset {
+	height: 200px;
+}
+#map-canvas img, #map-inset img {
+	max-width: none;
+}
+
+#map-canvas, #map-inset * {.box-sizing(content-box);
+}
+
+#sidemenu, #search-box, #map-choser-box {
+	position: absolute;
+	top: 75px;	
+}
+#sidemenu {
+	bottom: 10px;
+	left: 5px;
+	width: 350px;
+	opacity: 0.9;
+	filter: alpha(opacity=90); /* For IE8 and earlier */
+	padding: 5px;
+	overflow: hidden;
+}
+#search-box {
+	left: 360px;
+}
+
+#map-choser-box {
+	right: 280px;
+}
+#app-nav-bar {
+	/*position: absolute;*/
+	display: block;
+	width: 100%;
+}
+.point-list-view {
+	/*overflow-y: scroll;*/
+}
+.point-item:hover {
+	border-left: 5px solid rgb(66 , 139, 202);
+}
+
+.point-item h4 {
+	margin: 0 5px 0 0;
+}
+
+.point-item {
+	padding-left: 10px;
+	border-left: 5px solid rgb(0, 0, 0,0.5);
+}
+
+.point-item.active {
+	color: white;
+}
+.point-item-thumbnail {
+	margin-bottom: 20px;
+}
+
+.point-info {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#point-gallery-slide {
+	max-height: 200px;
+	min-height: 100px;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input {
+	margin-bottom: 10px;
+}
+
+/*HELPER*/
+
+.divider10 {
+	height: 10px;
+	clear: both;
+}
+
+.margin-right-10 {
+	margin-right: 10px;
+}
+
+/* PLUGIN */
+.mCSB_container {
+	margin-right: 20px;
+}
+
+/*Overwrite bootstrap */
+
+body.modal-open {
+	margin-right: 0;
+}
+
+.navbar {
+	/*background-color: #033566;*/
+	/*background-color: #25517C;*/
+	padding: 15px 0 15px 0;
+
+	/*box-shadow: 0 4px 4px -2px #232323;*/
+ /* -moz-box-shadow: 0 4px 4px -2px #232323;*/
+ /* -webkit-box-shadow: 0 4px 4px -2px #232323;*/
+}
+
+.navbar-brand {
+  background: url("http://gharysh.kz/spacedays/assets/images/logoKGS.png") no-repeat left top;
+  width: 200px;
+  height: 40px;
+  margin: 0 50px 0 50px;
+}
+
+/* RANGE SLIDERBOX */
+.range {
+    display: table;
+    position: relative;
+    height: 25px;
+    margin-top: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.range input[type="range"] {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+
+    display: table-cell;
+    width: 100%;
+    background-color: transparent;
+    height: 25px;
+    cursor: pointer;
+}
+.range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+
+    width: 11px;
+    height: 25px;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0px;
+    background-color: #485563; 
+}
+
+.range input[type="range"]::-moz-slider-thumb {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+    
+    width: 11px;
+    height: 25px;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0px;
+    background-color: #485563; 
+}
+
+.range output {
+    display: table-cell;
+    padding: 3px 5px 2px;
+    min-width: 40px;
+    color: #ffffff;
+    background-color: #485563;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+.range input[type="range"] {
+    outline: none;
+}
+
+.range.range-primary input[type="range"]::-webkit-slider-thumb {
+    background-color: #DF691A; 
+}
+.range.range-primary input[type="range"]::-moz-slider-thumb {
+    background-color: #DF691A; 
+}
+.range.range-primary output {
+    background-color: #DF691A; 
+}
+.range.range-primary input[type="range"] {
+    outline-color: #DF691A; 
+}
+
+.range.range-success input[type="range"]::-webkit-slider-thumb {
+    background-color: #5CB85C;
+}
+.range.range-success input[type="range"]::-moz-slider-thumb {
+    background-color: #5CB85C;
+}
+.range.range-success output {
+    background-color: #5CB85C;
+}
+.range.range-success input[type="range"] {
+    outline-color: #5CB85C;
+}
+
+.range.range-info input[type="range"]::-webkit-slider-thumb {
+    background-color: #5BC0DE;
+}
+.range.range-info input[type="range"]::-moz-slider-thumb {
+    background-color: #5BC0DE;
+}
+.range.range-info output {
+    background-color: #5BC0DE;
+}
+.range.range-info input[type="range"] {
+    outline-color: #5BC0DE;
+}
+
+.range.range-warning input[type="range"]::-webkit-slider-thumb {
+    background-color: #F0AD4E;
+}
+.range.range-warning input[type="range"]::-moz-slider-thumb {
+    background-color: #F0AD4E;
+}
+.range.range-warning output {
+    background-color: #F0AD4E;
+}
+.range.range-warning input[type="range"] {
+    outline-color: #F0AD4E;
+}
+
+.range.range-danger input[type="range"]::-webkit-slider-thumb {
+    background-color: #D9534F;
+}
+.range.range-danger input[type="range"]::-moz-slider-thumb {
+    background-color: #D9534F;
+}
+.range.range-danger output {
+    background-color: #D9534F;
+}
+.range.range-danger input[type="range"] {
+    outline-color: #D9534F;
+}
+/*end of RANGE SLIDERBOX*/
